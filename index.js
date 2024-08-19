@@ -37,3 +37,18 @@ function prevSlide() {
 
 // Optional: Automatic slideshow
 setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+const form = document.getElementById('contactForm');
+const thankYou = document.getElementById('thankYou');
+const input = document.querySelector('input');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  // You can add form validation here
+
+  // Simulate form submission (replace with actual submission logic)
+  thankYou.style.display = 'block';
+  form.style.display = 'block';
+  form.reset();
+});

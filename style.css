@@ -21,9 +21,9 @@
     grid-template-areas: 
         "hero-container" 
         "donate" 
-        "music" 
         "services" 
         "clients" 
+        "form" 
         "footer";
     overflow-x: hidden;
     
@@ -119,9 +119,7 @@
     font-size: 1.4rem;
 }
 
-form {
-    background: var(--form-color);
-}
+
 
 button {
     background: var(--button-color);
@@ -140,9 +138,6 @@ button {
     align-items: center;
 }
 
-.music {
-    grid-area: music;
-}
 
 .services {
     grid-area: services;
@@ -150,6 +145,11 @@ button {
 
 .clients {
     grid-area: clients;
+}
+
+
+.form {
+    grid-area: form;
 }
 
 footer {
@@ -174,7 +174,7 @@ footer {
     overflow: hidden;
     margin: 0 auto;
     border-radius: 10px;
-    background: white;
+    
 }
 
 .carousel-inner {
@@ -195,6 +195,28 @@ footer {
     max-width: 100%;
     border-radius: 10px;
     margin-bottom: 10px;
+}
+
+.imgy {
+    position: relative;
+    max-width: 100%;
+}
+
+.quick {
+    position: absolute;
+    bottom: 80px;
+    align-items: center;
+    background: rgb(203, 196, 196);
+    width: 35%;
+    /* height: inherit; */
+    z-index: 0;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    display: none;
+}
+
+.carousel-item img > p:hover {
+
 }
 
 .description {
@@ -245,7 +267,7 @@ footer {
         margin-top: 20px;
         font-size: 1rem;
         margin-left: 50px;
-        background: var(--accent-color);
+        background: skyblue;
         padding: 10px;
         border: 1px var(--accent-color) solid;
         border-radius: 10px;
@@ -266,7 +288,16 @@ footer {
         /* margin-right: auto; */
         align-items: center;
 }
+.art-btn {
+    color: black;
+    font-weight: 500;
+    
+}
 
+.artist-btn:hover {
+    transform: translate(0, -6px);
+    transition: 0.3s ease-in transform;
+}
 
 @media only screen and (max-width: 768px) {
     .container {
@@ -275,9 +306,9 @@ footer {
         grid-template-areas: 
             "hero-container" 
             "donate" 
-            "music" 
             "services" 
             "clients" 
+            "form" 
             "footer";
     }
 
@@ -443,6 +474,7 @@ footer {
         justify-content: center;
         align-items: center;
         margin: 70px;
+        margin-left: 40px;
     }
 
     .artist {
@@ -472,4 +504,177 @@ footer {
         color: black;
     }
 
+    .services {
+        grid-area: services;
+        display: flex;
+        flex-direction: column;
+        /* margin: 10px; */
+        justify-content: center;
+        align-items: center;
+        background: gray;
+    }
+
+    .service {
+        margin: 5px;
+        padding: 10px;
+        /* align-items: center;
+        justify-content: center; */
+        height: 100vh;
+    }
+
+    .service:last-child {
+        
+    }
+
+    .service-image {
+        border-radius: 50%;
+        
+    }
+
+    .service-title {
+        margin: 5px 0;
+        font-size: 2rem;
+    }
+
+    .service-text {
+        width: 80%;
+        color: var(--text-color);
+        font-size: 1.5rem;
+    }
+
+    .get {
+        margin: 5px;
+        padding: 10px;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .get-txt {
+        width: 80%;
+        color: var(--text-color);
+        font-size: 1.2rem;
+        word-break: break-word;
+    }
+
+    .get-btn {
+        color: var(--text-color);
+        background: transparent;
+        padding: 10px;
+        border: solid 1px inherit;
+        border-radius: 5px;
+        margin: 5px;
+    }
+
+    .get-btn:hover {
+        color: white;
+        background: black
+    }
+
+    .clients {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 5px;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+    .client {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+    }
+
+    .client-image {
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+}
+
+.cli-title {
+    font-size: 1.5rem;
+    margin: 15px 0 10px;
+    padding: 0 15px;
+}
+
+.cli-text {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+    padding: 0 15px 15px;
+    flex-grow: 1;
+    word-wrap: break-word;
+    width: 87%;
+}
+
+.cli-btn {
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 10px;
+    color: white;
+    background: black;
+    margin-bottom: 2px;
+}
+
+    .form {
+        grid-area: form;
+        height: 100vh;
+        background: #cfd1ca;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 80vw;
+        margin-left: 40px;
+      }
+
+      .form-title {
+        margin: 5px;
+      }
+
+      .Logos {
+        margin: 5px;
+
+      }
+
+      input, textarea {
+        padding: 10px;
+        border: none;
+        border-bottom: 1px solid #080808;
+        background-color: transparent;
+        color: #020129;
+        width: 80%;
+        outline: none;
+      }
+
+      .form-submit {
+        background-color: #ffffff;
+        color: #110a0a;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        margin: 4px;
+        border-radius: 10px;
+        width: 80%;
+      }
+
+    footer {
+        grid-area: footer;
+        height: 100vh;
+    }
 }
